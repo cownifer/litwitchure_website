@@ -1,0 +1,33 @@
+.performance
+    w-full()
+    border-bottom 4px solid hsl(181.8, 100%, 26.5%)
+    background-color $cl--text--heading
+    padding $sp--times-two 0
+
+    &__inner
+        display flex
+        flex-direction column-reverse
+        +above(1070px)
+            flex-direction row
+        align-items center
+        justify-content space-between
+        gap $sp--times-two
+        contain()
+
+    &__text
+        flex 1 1 auto
+
+        p
+            color $cl--interface--dark
+
+            a
+                content-anchor($initial-color: hsl(181.8, 100%, 26.5%), $interaction-color: hsl(181.8, 100%, 21%))
+
+    &__image
+        +above(1070px)
+            flex 0 0 20rem
+        +below(1070px)
+            width 20rem
+
+        img
+            border-radius 8px
